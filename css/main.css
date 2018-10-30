@@ -28,9 +28,10 @@ header{
     float: right;
 }
 .main-nav ul{
-    list-style: none;
+    list-style:none;
     margin-right: 15px;
     margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
 }
 .main-nav li{
@@ -39,6 +40,10 @@ header{
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
+}
+.main-nav li a {
+  color: #3a3a3a;
+    text-decoration: none;
 }
 
 .card{

@@ -1,0 +1,175 @@
+body{
+    background-color: black;
+}
+.skeleton *{
+    background-repeat: no-repeat;
+}
+.skeleton{
+    animation-name: skeleton-body;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    position: absolute;
+    bottom: 164px;
+    left: 50%;
+    z-index: 6;
+    width: 54px;
+    height: 87px;
+    margin: 0 0 0 -120px;
+    transform: translateX(-50%);
+    background-image: url(img/body.svg);
+}
+.skeleton--head{
+    animation-name: skeleton-head;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    z-index: 6;
+    width: 40px;
+    height: 46px;
+    margin: 0 0 0 -1px;
+    transform: translateX(-50%);
+    transform-origin: left;
+    background-image: url(img/head.svg);
+}
+.skeleton--left-arm{
+    position: absolute;
+    right: 100%;
+    top: -16px;
+    z-index: 6;
+    width: 34px;
+    height: 31px;
+    transform: rotate(64deg);
+    background-image: url(img/arm-left.svg)
+}
+.skeleton--left-arm--hand{
+    animation-name: skeleton-left-hand;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 6;
+    width: 27px;
+    height: 50px;
+    background-image: url(img/hand-left.svg)
+}
+.skeleton--right-arm{
+    position: absolute;
+    left: 100%;
+    top: -16px;
+    z-index: 6;
+    width: 34px;
+    height: 31px;
+    transform: rotate(-64deg);
+    background-image: url(img/arm-right.svg)
+}
+.skeleton--right-arm--hand{
+    animation-name: skeleton-right-hand;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 6;
+    width: 34px;
+    height: 51px;
+    background-image: url(img/hand-right.svg)
+}
+.skeleton--left-leg{
+    animation: skeleton-left-leg 
+        0.8s
+        linear
+        infinite;
+    position: absolute;
+    right: 100%;
+    top: 100%;
+    z-index: 6;
+    width: 44px;
+    height: 43px;
+    margin: 0 -12px 0 0;
+    background-image: url(img/leg-left.svg);
+}
+.skeleton--left-leg--foot{
+    animation: skeleton-left-foot
+        0.8s
+        linear
+        infinite;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 6;
+    width: 39px;
+    height: 68px;
+    margin: 0 0 0 -24px;
+    background-image: url(img/foot-left.svg);
+}
+.skeleton--right-leg--foot{
+    animation: skeleton-right-foot
+        0.8s
+        0.4s
+        linear
+        infinite;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 6;
+    width: 39px;
+    height: 68px;
+    margin: 0 -24px 0 0;
+    background-image: url(img/foot-right.svg);
+}
+.skeleton--right-leg{
+    animation: skeleton-right-leg 
+        0.8s
+        0.4s
+        linear
+        infinite;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    z-index: 6;
+    width: 44px;
+    height: 43px;
+    margin: 0 0 0 -12px;
+    background-image: url(img/leg-right.svg);
+}
+@keyframes skeleton-head{
+    0%{transform:rotate(10deg) translateX(-50%)}50%{transform:rotate(-10deg) translateX(-50%)}100%{transform:rotate(10deg) translateX(-50%)}
+}
+@keyframes skeleton-left-hand{
+    0%{transform: rotate(0deg) translate(0px, 0px)}
+    50%{transform: rotate(-45deg) translate(22px, 0px)}
+    100%{transform: rotate(0deg) translate(0px, 0px)}
+}
+@keyframes skeleton-right-hand{
+    0%{transform: rotate(45deg) translate(-22px, 0px)}
+    50%{transform: rotate(0deg) translate(0px, 0px)}
+    100%{transform: rotate(45deg) translate(-22px, 0px)}
+}
+@keyframes skeleton-left-leg{
+    0%{margin-top: 0px;margin-right:-12px;transform: rotate(0deg)}
+    50%{margin-top:-14px;margin-right:-6px;transform: rotate(45deg)}
+    100%{margin-top: 0px;margin-right:-12px;transform:rotate(0deg)}
+}
