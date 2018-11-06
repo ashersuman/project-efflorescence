@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Progress Analyser</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <div class="name">
+            <h1>Progress Tracker</h1>      
+        </div>
+    </header>
+    <div id="container">
+        <!--Input to upcoming plan --> 
+        <div id="part1">
+            <div class="content">
+                <h4>What do you plan to do next?</h4>
+                <form>
+                    <textarea>
+                    </textarea>
+                </form>
+                <a class="button next green">Next</a>
+            </div>
+        </div>
+        <!--If any progress is there or not -->
+        <div id="part2">
+            <div class="content">
+                <h4>Do you have any progress to update?</h4>
+                <a class="button yes green">Yes</a>
+                <a class="button no red">No</a>
+            </div>
+        </div>
+        <!-- If yes is clicked goes to yes part else no and then exit -->
+        <div id="part3">
+            <div class="content if-yes">
+                <h4>Its great to hear a progress.</h4>
+                <form>
+                    <textarea>
+                    </textarea>
+                </form>
+                <a class="button next green">Next</a>
+            </div>
+            <div class="content if-no">
+                <h4>Waiting to hear a progress...</h4>
+                <h4>Enter a pass phrase provided.</h4>
+                <input type="password" />
+                <a class="button submit blue">Submit</a>
+            </div>
+        </div> 
+        <!--After the progress is updated we encrypt and exit -->
+        <div id="part4">
+            <div class="content yes">
+                <div class="quote-container">
+                    <p class="quote">
+                        Coming together is a beginning, keeping together is progress, working together is success.
+                    </p>
+                </div>
+                    <h4>Enter a pass phrase provided.</h4>
+                    <input type="password" />
+                    <a class="button submit blue">Submit</a>  
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a class="view-progress" href="../index.html" hidden>View Progress</a>
+        <div class="name">&#9679;Project Efflorescence &#9679; Mr.Xploit&#9679;</div>
+    </footer>
+</body>
+    <script src="assets/js/aes.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</html>
