@@ -1,5 +1,5 @@
 var last ="00:00:00";
-$('#clock').countdown('2021/07/21 00:00:00', function(event) {
+$('#clock').countdown('2021/01/22 00:00:00', function(event) {
   var format = '%H:%M:%S';
 
   if(event.offset.totalDays > 0) {
